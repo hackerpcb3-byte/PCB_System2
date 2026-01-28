@@ -1311,10 +1311,10 @@ body {
   height: 420px;          /* MÁS ALTURA para posters */
   object-fit: contain;   /* NO recorta */
   object-position: center;
-  background-color: #0b1f3a; /* similar al fondo del poster */
+  display: block;
   background: radial-gradient(circle at top, rgba(255,255,255,0.12), rgba(11,31,58,1));
   padding: 14px;          /* crea marco */
-  display: block;
+ 
 }
 
 }
@@ -1862,4 +1862,5 @@ body.dark-mode .theme-option:hover {
     padding: 0 15px;
   }
 }
+
 
