@@ -518,7 +518,6 @@ body {
               url('images14.jpeg') center center no-repeat;
   background-size: cover;
   background-attachment: scroll;
-  background-position: center center;
   padding: 5rem 0 6rem;
   position: relative;
   overflow: hidden;
@@ -731,7 +730,6 @@ body {
 .section {
   padding: 5rem 0;
   position: relative;
-  background: var(--bg);   /* ✅ esto evita que se vea el hero detrás */
 }
 
 .section-alt {
@@ -851,6 +849,24 @@ body {
   transform: scaleX(1);
 }
 
+.card:hover {
+  /* Efecto de movimiento desactivado */
+  /* transform: translateY(-5px); */
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); */
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.card:hover .card-icon {
+  /* Efecto de movimiento desactivado */
+  /* animation: pulse 0.6s ease; */
+  /* transform: scale(1.1); */
+}
 
 .card h3,
 .card h4 {
@@ -1291,12 +1307,9 @@ body {
 /* IMAGEN COMPLETA */
 .promotion-image {
   width: 100%;
-  height: 420px;
-  object-fit: contain; 
-  object-position: center;
-  display: block;
-  background: radial-gradient(circle at top, rgba(255,255,255,0.12), rgba(11,31,58,1));
-  padding: 14px;      
+  height: 340px;          /* MÁS ALTURA para posters */
+  object-fit: contain;   /* NO recorta */
+  background-color: #0b1f3a; /* similar al fondo del poster */
 }
 
 /* TEXTO */
@@ -1319,6 +1332,12 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+.promotion-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
 
 .promotion-caption {
   padding: 1.5rem;
@@ -1385,6 +1404,37 @@ body {
 .site-footer p {
   position: relative;
   z-index: 1;
+}
+
+/* ===== Botón de llamada a la acción ===== */
+.cta-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  color: #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(242, 201, 76, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(242, 201, 76, 0.6);
+  background: #f4d35e;
+}
+
+.cta-button:active {
+  transform: scale(0.95);
 }
 
 /* ===== Menu Hamburguesa ===== */
