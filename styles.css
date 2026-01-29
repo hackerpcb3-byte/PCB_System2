@@ -730,6 +730,7 @@ body {
 .section {
   padding: 5rem 0;
   position: relative;
+  background: var(--bg);
 }
 
 .section-alt {
@@ -1893,3 +1894,4 @@ body.dark-mode .theme-option:hover {
     padding: 0 15px;
   }
 }
+
